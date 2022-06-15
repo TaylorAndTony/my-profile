@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/vue3.js"></script>
+    <title>TaylorAndTony</title>
 </head>
+
 <body>
-    
+    <div id="app">
+        <!-- head -->
+        <div id="head">
+            <div id="head-text">{{title}}</div>
+        </div>
+        <!-- content -->
+        <div id="content">
+            <!-- photo -->
+            <div id="photo-wrapper">
+                <img src="img/profile.png" alt="" class="circle">
+                <div id="profile-name">Taylor</div>
+            </div>
+            <!-- skills -->
+            <div id="skill">
+                <!-- basic -->
+                <div class="title">Basic Skills</div>
+                <div class="desc">
+                    <p class="para">
+                        Daily softwares like Microsoft Word, Excel, and PowerPoint, are
+                        essential. I can use these softwares to create clear, neat documents,
+                        table with auto calculations, and clean, nice-looking PPT.
+                    </p>
+                </div>
+                <div class="skill-one-line">
+                    <div class="skill-card-one-line" v-for="skill in basicSkills">
+                        <img :src="skill.icon" alt="" class="skill-icon">
+                        <div class="skill-text">{{skill.name}}</div>
+                    </div>
+                </div>
+                <!-- pro -->
+                <div class="title">Multi-Media Skills</div>
+                <div class="desc">
+                    <p class="para">
+                        I can use multi-media softwares to create images, videos,
+                        audios and other fancy-looking medias. Also, I can
+                        photoshop images, make them look nicer, remove unnecessary
+                        objects in images and so on.
+                    </p>
+                    <p class="para">
+                        Video editing such as creating an introduction for
+                        a product or event, is a pretty good idea for advertise.
+                        I can use Premiere Pro to create videos, edit videos and
+                        do some color correction.
+                    </p>
+                </div>
+                <div class="skill-one-line">
+                    <div class="skill-card-one-line" v-for="skill in mediaSkills">
+                        <img :src="skill.icon" alt="" class="skill-icon">
+                        <div class="skill-text">{{skill.name}}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="blank"></div>
+    </div>
+    <script src="static/main.js"></script>
 </body>
+
 </html>
