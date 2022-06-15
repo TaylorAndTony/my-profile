@@ -57,10 +57,30 @@
                         do some color correction.
                     </p>
                 </div>
+                <!-- ps pr ai au -->
                 <div class="skill-one-line">
                     <div class="skill-card-one-line" v-for="skill in mediaSkills">
                         <img :src="skill.icon" alt="" class="skill-icon">
                         <div class="skill-text">{{skill.name}}</div>
+                    </div>
+                </div>
+                <!-- code -->
+                <div class="title">Coding Skills</div>
+                <div class="desc">
+                    <p class="para">
+                        I can use HTML, css and JavaScript to create
+                        webpages with images and videos. Also, I can
+                        build them using Vue framework which allows me
+                        to quickly write pages.
+                    </p>
+                    <p class="para">
+                        For backend, I'm capable of using Python
+                        to analyze data and create simple HTTP servers.
+                    </p>
+                </div>
+                <div class="skill-one-line">
+                    <div class="skill-card-one-line-small" v-for="skill in codeSkills">
+                        <img :src="skill.icon" alt="" class="skill-icon-small">
                     </div>
                 </div>
             </div>
